@@ -1,0 +1,24 @@
+<html>
+<body>
+  <canvas id="the_canvas" width="400" height="400"></canvas>
+  <script>
+    var num = window.prompt("how many squares?")
+    num = parseInt(num)
+    var counter = 0;
+    var rando = Math.floor(Math.random()*90)
+    var canvas = document.getElementById('the_canvas');
+    var ctx = canvas.getContext('2d');
+
+    while (counter < num) {
+      var r = Math.floor(Math.random()*255);
+      var g = Math.floor(Math.random()*255);
+      var b = Math.floor(Math.random()*255);
+      var x = Math.floor(Math.random()*300);
+      var y = Math.floor(Math.random()*300);
+      ctx.fillStyle = "rgb("+r+","+g+","+b+")";
+      ctx.fillRect (x,y,20,20);
+      counter ++;
+      };
+  </script>
+</body>
+</html>

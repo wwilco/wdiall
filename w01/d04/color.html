@@ -1,0 +1,44 @@
+<html>
+<body>
+  <canvas id="the_canvas" width="400" height="400"></canvas>
+  <script>
+  var num = window.prompt("how many squares?");
+  num = parseInt(num);
+  var rando = Math.floor(Math.random()*90)
+  var canvas = document.getElementById('the_canvas');
+  var ctx = canvas.getContext('2d');
+  var colors = ["brown", "#9999FF", "green"];
+  var col = 0;
+
+  for (var i = 0; i < num; i++) {
+
+      //randomize location of square
+      var x = Math.floor(Math.random()*300);
+      var y = Math.floor(Math.random()*300);
+
+      //reset loop
+      if (col === 3){
+        col = 0;
+      }
+
+      //set color of box to the index of the colors array
+      var boxColor = colors[col];
+
+      ctx.fillStyle = boxColor;
+      ctx.fillRect (x,y,20,20);
+
+      //increment
+      col++;
+    };
+
+
+  </script>
+</body>
+</html>
+
+<!--
+var num = []
+
+for (var i = 1; i <= 100; i++) {
+  num.push(i);
+} -->

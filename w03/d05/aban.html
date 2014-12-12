@@ -1,0 +1,154 @@
+<html>
+<header id="header">
+  <style>
+  body {
+    padding: 50px 0;
+    width: 500px;
+    height: 250px;
+    margin: auto;
+    color: #006600;
+    text-align: center;
+    border-style: solid;
+    border-color: blue;
+    font-size: 21px;
+    font-weight: bold;
+    background-color: red;
+  }
+
+  #container1{
+    background-size: 400px 400px;
+    background-position: center;
+    background-image: url(http://www.esquire.com/cm/esquire/images/53/07-esq-walton-ford-the-tigress-mdn.jpg);
+  }
+
+  p {
+    margin: 20px 25px;
+  }
+
+  #newDiv {
+    width: 500px;
+    height: 250px;
+    margin: auto;
+    color: #000066;
+  }
+
+  #divling1 {
+    float: left;
+    width: 250px;
+    height: 100px;
+    color: #000066;
+    margin-top: 20px;
+  }
+
+  #divling2 {
+    float: right;
+    width: 250px;
+    height: 100px;
+    color: #000066;
+    margin-top: 20px;
+  }
+
+
+  </style>
+</header>
+<body id="body">
+<script>
+var body = document.querySelector("body");
+
+var div = document.createElement("div");
+body.appendChild(div);
+div.id="container1"
+
+var fstH = document.createElement("h1");
+div.appendChild(fstH);
+fstH.innerHTML="About yourself";
+
+var para = document.createElement("p");
+div.appendChild(para);
+para.innerHTML="Name: ";
+para.id="name";
+
+var textfld = document.createElement("input");
+para.appendChild(textfld);
+textfld.id="nametxt";
+
+var para = document.createElement("p");
+div.appendChild(para);
+para.innerHTML="Astrological Sign: ";
+para.id="sign";
+
+var textfld = document.createElement("input");
+para.appendChild(textfld);
+textfld.id="signtxt";
+
+var para = document.createElement("p");
+div.appendChild(para);
+para.innerHTML="Home Town: ";
+para.id="homeT";
+
+var textfld = document.createElement("input");
+para.appendChild(textfld);
+textfld.id="hometxt";
+
+var para = document.createElement("p");
+div.appendChild(para);
+para.innerHTML="Color: ";
+para.id="color";
+
+var textfld = document.createElement("input");
+para.appendChild(textfld);
+textfld.id="clrtxt";
+
+var para = document.createElement("p");
+div.appendChild(para);
+para.id="btnSpace";
+
+var button = document.createElement("button");
+para.appendChild(button);
+button.innerHTML="Create Profile";
+button.id="button";
+
+var rmvNadd = function(){
+  var body = document.querySelector("#body");
+  var name = document.querySelector("#nametxt").value;
+  var sign = document.querySelector("#signtxt").value;
+  var homeTown = document.querySelector("#hometxt").value;
+  var color = document.querySelector("#clrtxt").value;
+  var container = document.querySelector("#container1");
+  var header = document.querySelector("#header");
+
+  var hOne = document.createElement("h1");
+  header.appendChild(hOne);
+  hOne.innerHTML="About " + name;
+
+  var newDiv = document.createElement("div");
+  div.id="newDiv";
+  body.appendChild(newDiv);
+
+  var divling1 = document.createElement("div");
+  div.id="divling1";
+  newDiv.appendChild(divling1);
+
+  var divling2 = document.createElement("div");
+  div.id="divling2";
+  newDiv.appendChild(divling2);
+
+  var divSign = document.createElement("p");
+  divling1.appendChild(divSign);
+  divSign.innerHTML= "My sign is " + sign;
+  var divHT = document.createElement("p");
+  divling2.appendChild(divHT);
+  divHT.innerHTML = "I'm from " + homeTown;
+
+  var cssing = document.querySelector("#newDiv");
+  body.style.backgroundColor = color;
+
+  body.removeChild(container);
+}
+
+var bttn = document.querySelector("#button");
+bttn.addEventListener("click", rmvNadd);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+</body>
+<script>
+  var body = document.querySelector("body"); //grab body(parent element)
+  var div1 = document.createElement("div");
+  var p1 = document.createElement("p");
+  var input1 = document.createElement("input");
+  input1.id = "inname;"
+  var p2 = document.createElement("p");
+  var input2 = document.createElement("input");
+  var p3 = document.createElement("p");
+  var input3 = document.createElement("input");
+  var p4 = document.createElement("p");
+  var input4 = document.createElement("input");
+  body.appendChild(div1);
+  div1.appendChild(p1);
+  p1.innerText = "What is yo name? ";
+  p1.appendChild(input1);
+  p1.appendChild(p2);
+  p2.innerText = "What is yo sign? ";
+  p2.appendChild(input2);
+  p2.appendChild(p3);
+  p3.innerText = "Where you from? ";
+  p3.appendChild(input3);
+  p3.appendChild(p4);
+  p4.innerText = "Whats yo fav hex color? ";
+  p4.appendChild(input4);
+  div1.appendChild(button);
+  button.innerText = "Push me!";
+  var button = document.createElement("button");
+  button.addEventListener("click", function(){
+    body.removeChild(div1);
+    var name = document.querySelector("#inname");
+    name.innerHTML = document.querySelector("#inname").value;
+
+
+  };
+
+
+  // var flipIt = function(){
+  //   body.removeChild(div1);
+  //   var div2 = document.createElement("div");
+  //   var input1 = document.createElement("input");
+  //   var name = document.querySelector("input1").value;
+  //   body.appendChild(div2);
+  //   //name.innerText = document.querySelector("input1").value;
+  //   div2.appendChild(name);
+  // }
+  // button.addEventListener("click", flipIt);
+
+</script>
+</html>

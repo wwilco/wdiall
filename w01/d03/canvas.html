@@ -1,0 +1,50 @@
+<html>
+<body>
+  <canvas id="the_canvas" width="400" height="400"></canvas>
+  <script>
+    var canvas = document.getElementById('the_canvas');
+    var ctx = canvas.getContext('2d');
+    var rando = Math.floor(Math.random() * 9) + 1
+    var num = window.prompt("how many squares?")
+    var counter = 0
+    num = parseInt(num)
+
+    while(counter < num){
+      ctx.fillStyle = "red";
+      ctx.fillRect (rando * 3, counter * 5, 25, 25)
+      counter ++
+    };
+
+
+    ctx.fillStyle = "red";
+    ctx.fillRect (1, 1, 55, 50);
+
+    ctx.fillStyle = "blue";
+    ctx.fillRect (1, 300, 55, 50);
+
+    ctx.fillStyle = "green";
+    ctx.fillRect (300, 1, 55, 50);
+
+    ctx.fillStyle = "brown";
+    ctx.fillRect (300, 300, 55, 50);
+
+    ctx.fillStyle = "#E3B900";
+    ctx.fillRect (15, 315, 25, 25);
+
+    ctx.fillStyle = "#E3B900";
+    ctx.fillRect (15, 15, 25, 25);
+
+    ctx.fillStyle = "#E3B900";
+    ctx.fillRect (315, 15, 25, 25);
+
+    ctx.fillStyle = "#E3B900";
+    ctx.fillRect (315, 315, 25, 25);
+
+    ctx.fillStyle = "rgba(100, 23, 43, .75)";
+    ctx.fillRect (165, 165, 50, 55);
+
+    ctx.fillStyle = "#E3B900";
+    ctx.fillRect (177.5, 180, 25, 25);
+  </script>
+</body>
+</html>

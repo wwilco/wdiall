@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <input id="inpt" type="text">name</input>
+    <p id= "text" ></p>
+  </body>
+
+  <script>
+  var changing = function(){
+    var txtOutPut = document.querySelector("#text");
+    var txtInput = document.querySelector("#inpt").value;
+    txtOutPut.innerHTML = txtInput;
+  }
+
+  var txtbx = document.querySelector("#inpt");
+  txtbx.addEventListener("keyup", changing);
+
+  </script>
+</html>

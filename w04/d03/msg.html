@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <textarea id="text"></textarea>
+    <button id="button">Talk to Me...</button>
+    <script>
+    // var ws = new WebSocket("ws://localhost:3000");
+    // var body = document.querySelector("body");
+    // var button = document.querySelector("#button");
+    // var addText = function(msg){
+    //   button.addEventListener("click", function(msg){
+    //   ws.send(msg)
+    // });
+    //
+    // button.addEventListener("click", function(input){
+    //   var input =
+    // });
+    //
+    //
+    // bttn.addEventListener("click", function(msg){
+    //
+    //   ws.send()
+    // });
+    //
+    // ws.addEventListener("open", function(evt)
+    //
+    // var button = document.querySelector("button");
+    // var input = document.querySelector("input");
+    // var ul = document.querySelector("ul");
+
+    var ws = new WebSocket("ws://localhost:3000");
+    var body=document.querySelector("body");
+    var ul=document.createElement("ul");
+    body.appendChild(ul);
+
+    var input=document.querySelector("input");
+    var button=document.querySelector("#button");
+    body.appendChild(input);
+    body.appendChild(button);
+
+    var addText=function(msg){
+      var newLi=document.createElement("li");
+      newLi.innerHTML=msg;
+      var firstli=ul.firstChild;
+      //ul.insertBefore(newLi,firstli);
+      var ula=document.querySelector("ul");
+      ula.appendChild(newLi);
+    }
+    ws.addEventListener("open", function(evt) {
+      addText("connected");
+      console.log('connected');
+      //document.write("connented............."); // if have document.write will overwirte the list.
+    });
+
+    ws.addEventListener("message", function(evt) {
+      addText(evt.data)
+      console.log(evt.data);
+      //document.write(evt.data + "<br>");
+    });
+
+    button.addEventListener("click",function(){
+      ws.send(input.value); //this is send text to the server(terminal).
+      input.value=" ";
+
+    });
+
+    </script>
+  </body>
+</html>

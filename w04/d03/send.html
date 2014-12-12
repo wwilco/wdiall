@@ -1,0 +1,66 @@
+<html>
+  <head>
+  </head>
+  <style>
+    ul {
+      list-style: none;
+    }
+    li {
+      font-family: Verdana;
+    }
+  </style>
+  <body>
+    <input type="text"></input>
+    <button id="button">Talk to Me...</button>
+
+    <script>
+    //to connect
+    //server: wscat -l 2000
+    //go to browser
+
+    var ws = new WebSocket("ws://localhost:2000");
+    var body=document.querySelector("body");
+    var ul=document.createElement("ul");
+
+    body.appendChild(ul);
+    //ul.appendChild(input);
+
+    var input=document.querySelector("input");
+    var button=document.querySelector("#button");
+    // body.appendChild(input);
+    // body.appendChild(button);
+
+    var addText=function(msg){
+      var msg = input.value
+      var newli=document.createElement("li");
+      // newli.innerHTML=msg;
+      var firstli=ul.firstChild;
+      ul.insertBefore(newli,firstli);
+      var ul1=document.querySelector("ul");
+      ul1.appendChild(newli);
+    }
+    // ws.addEventListener("open", function(evt) {
+    //   addText("connected");
+    //   //console.log('connected');
+    //   //document.write("connented............."); // if have document.write will overwirte the list.
+    // });
+
+    //terminal sends msg to browser
+    ws.addEventListener("message", function(evt) {
+      console.log(evt.data);
+    });
+    //click button
+    button.addEventListener("click",function(){
+      ws.send(input.value); //this is send text to the server(terminal).
+      input.value="";
+    });
+    //enter on keyboard button
+    input.addEventListener("keydown", function(e){
+      if (e.keyCode === 13){
+        ws.send(input.value); //this is send text to the server(terminal).
+        input.value="";
+      }
+    });
+    </script>
+  </body>
+</html>

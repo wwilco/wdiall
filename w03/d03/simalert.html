@@ -1,0 +1,52 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <button id="button">add new</button>
+  <button id="button2">add random</button>
+  <button id="button3">remove</button>
+
+</body>
+<script>
+var simpsonsArray = ["Homer", "Marge", "Bart", "Lisa", "Maggie", "Abe"];
+var randoArray = ["Apu", "Moe", "Barney", "Otto", "Nelson"];
+var body = document.querySelector("body");
+var ol = document.createElement("ol");
+body.appendChild(ol);
+
+simpsonsArray.forEach(function(elem){
+  var li = document.createElement("li");
+  ol.appendChild(li);
+  li.innerHTML = elem;
+});
+
+var addNew = function(){
+  var x = prompt("What chatacter would you like to add?");
+  //var button = document.querySelector("#button");
+  var li = document.createElement("li");
+  ol.appendChild(li);
+  li.innerHTML = x;
+}
+button.addEventListener("click", addNew);
+
+var addRandom = function(){
+  var randoArray = ["Apu", "Moe", "Barney", "Otto", "Nelson"];
+  var x = Math.floor(Math.random()*randoArray.length);
+  //var button = document.querySelector("#button");
+  var li = document.createElement("li");
+  ol.appendChild(li);
+  li.innerHTML = randoArray[x];
+}
+button2.addEventListener("click", addRandom);
+
+var remove = function(){
+  //var last = li.lastChild;
+  var list = document.querySelectorAll("li")
+  ol.removeChild(list[list.length-1]);//first list, element youre targeting
+  //parentElement.removeChild(elementToRemove)
+}
+button3.addEventListener("click", remove);
+
+</script>
+</html>

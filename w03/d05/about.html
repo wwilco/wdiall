@@ -1,0 +1,53 @@
+<html>
+<link rel="stylesheet" type="text/css" href="about.css">
+  <body id="body">
+    <div id="div1">
+      <p id= "name" >name:</p>
+      <input id="input1" type="text"></input>
+      <p id= "sign" >sign:</p>
+      <input id="input2" type="text"></input>
+      <p id= "home" >hometown:</p>
+      <input id="input3" type="text"></input>
+      <p id= "color" >favorite color:</p>
+      <input id="input4" type="text"></input>
+      </br>
+      <button id="button">push me now!</button>
+    </div>
+  </body>
+  <script>
+
+  var flipIt = function(){
+    var input = document.querySelector("#input1").value;
+    var input2 = document.querySelector("#input2").value;
+    var input3 = document.querySelector("#input3").value;
+    var input4 = document.querySelector("#input4").value;
+    var body = document.querySelector("#body");
+    var div1 = document.querySelector("#div1");
+    p = document.createElement("p");
+    p2 = document.createElement("p");
+    p3 = document.createElement("p");
+    p4 = document.createElement("p");
+    body.appendChild(p);
+    p.innerHTML = input;
+    body.appendChild(p2);
+    p2.innerHTML = input2;
+    body.appendChild(p3);
+    p3.innerHTML = input3;
+    body.appendChild(p4);
+    p4.innerHTML = "fav color " + input4;
+    body.removeChild(div1);
+  }
+
+  var button = document.querySelector("button");
+  button.addEventListener("click", flipIt);
+
+
+  // var button = document.querySelector("button");
+  // var button.addEVentListener("click", function(){
+  //   var body = document.querySelector("#body");
+  //   var div1 = document.querySelector("#div1");
+  //   body.removeChild(div1);
+  // });
+
+  </script>
+</html>

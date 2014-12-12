@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <input type="text" id="write" onkeyup="myFunction()">
+
+  <p id="print"></p>
+
+<script>
+function myFunction() {
+  var words = document.querySelector("#write").value;
+  document.querySelector("#print").innerHTML = words;
+}
+
+// function myFunction() {
+//   var words = document.getElementById("write").value;
+//   document.getElementById("print").innerHTML = words;
+// }
+</script>
+
+</body>
+</html>

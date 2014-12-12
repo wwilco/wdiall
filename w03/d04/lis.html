@@ -1,0 +1,22 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <input type="text" input>
+    <ul draggable="true"></ul>
+    <button>push me!</button>
+    
+    <script>
+      var button = document.querySelector("button");
+      var input = document.querySelector("input");
+      var ul = document.querySelector("ul");
+
+      button.addEventListener("click", function(){
+        var li = document.createElement("li");
+        li.innerHTML = input.value;
+        ul.appendChild(li);
+      });
+
+    </script>
+  </body>
+</html>

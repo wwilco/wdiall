@@ -1,0 +1,41 @@
+<html>
+<body>
+  <canvas id="the_canvas" width="400" height="400"></canvas>
+  <script>
+//ask user for input and turn input into a variable
+var num = parseInt(prompt("Enter a number"));
+
+//store colors into array
+var colors = ["rgba(42, 75, 88, 0.5)", "rgba(224, 226, 216, 0.5)", "rgba(181, 85, 88, 0.5)"];
+var col = 0
+
+//draw square
+var canvas = document.getElementById('the_canvas');
+var ctx = canvas.getContext('2d');
+
+for (i = 0; i < num; i++) {
+
+  //randomize location of square
+  var x = Math.floor(Math.random() *(400 - 1) + 1);
+  var y = Math.floor(Math.random() *(400 - 1) + 1);
+
+  //reset loop
+  if (col === 3) {
+    col = 0;
+  }
+
+  //set color of box to the index of the colors array
+  var boxColors = colors[col];
+
+  ctx.fillStyle = boxColors;
+  ctx.fillRect (x, y, 20, 20);
+
+  //increment
+  col++;
+}
+
+
+
+</script>
+</body>
+</html>

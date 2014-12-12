@@ -1,0 +1,24 @@
+<html>
+<button id="button">Ahheaven</button>
+
+<body>
+  <canvas id="the_canvas" width="400" height="400"></canvas>
+  <script>
+  var canvas = document.getElementById('the_canvas');
+  var ctx = canvas.getContext('2d');
+  var boom = function(){
+    var draw = function(){
+      var rannum = Math.floor(400 * Math.random());
+      var ran = Math.floor(400 * Math.random());
+      var colord = "rgb(" + Math.floor(255*Math.random()) + "," + Math.floor(255*Math.random()) + "," + Math.floor(255*Math.random())+ ")";
+      ctx.fillStyle = colord;
+      ctx.fillRect (rannum, rannum, rannum, 1);
+    };
+    setInterval(draw, 5);
+  }
+var button = document.querySelector("#button");
+button.addEventListener("click", boom);
+  </script>
+</body>
+
+</html>

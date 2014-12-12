@@ -1,0 +1,11 @@
+-Change Element of an html on chrome
+document.querySelector("#mouse")
+<li class=​"mammal" id=​"mouse">​mouse​</li>​
+var x = document.querySelector("#mouse")
+undefined
+x
+<li class=​"mammal" id=​"mouse">​mouse​</li>​
+x.innerText //try inner.HTML on firefox
+"mouse"
+x.innerText = "itchy"
+"itchy"

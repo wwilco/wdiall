@@ -1,0 +1,52 @@
+body {
+  padding: 50px 0;
+  width: 500px;
+  height: 250px;
+  margin: auto;
+  color: #006600;
+  text-align: center;
+  border-style: solid;
+  border-color: black;
+  font-size: 21px;
+  font-weight: bold;
+  background-color: black;
+}
+
+#container1{
+  background-image: url("http://webscience.me/wp-content/uploads/2013/08/cropped-image.jpg");
+  background-repeat: no-repeat;
+  background-size: 420px 420px;
+  background-position: center;
+}
+
+p {
+  margin: 20px 25px;
+}
+
+
+#hOne {
+  color: #000066;
+}
+
+#newDiv {
+  width: 500px;
+  height: 250px;
+  margin: auto;
+  color: #000066;
+}
+
+#divling1 {
+  float: left;
+  width: 250px;
+  height: 100px;
+  color: #000066;
+  margin-top: 20px;
+}
+
+#divling2 {
+  float: right;
+  width: 250px;
+  height: 100px;
+  color: #000066;
+  margin-top: 20px;
+}

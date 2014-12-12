@@ -1,0 +1,19 @@
+<html>
+<script>
+var button = document.querySelector("#button");
+var box = document.querySelector("input#checkbox");
+button.addEventListener("click", function(){
+  box.addEventListener("click")
+  if (box.checked){
+    window.alert("It's checked!");
+  }
+  else {
+    window.alert("Not checked!");
+  }
+});
+</script>
+<body>
+  <p><input type ="checkbox" id = "checkbox">something random here</p>
+  <button id="button">do something</button>
+</body>
+</html>

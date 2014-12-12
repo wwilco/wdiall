@@ -1,0 +1,61 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <button id="button">add random!</button>
+</body>
+<script>
+var simpsonsArray = ["Homer", "Marge", "Bart", "Lisa", "Maggie", "Abe"];
+var randoArray = ["Apu", "Moe", "Barney", "Otto", "Nelson"];
+var body = document.querySelector("body");
+var ol = document.createElement("ol");
+body.appendChild(ol);
+
+simpsonsArray.forEach(function(elem){
+  var li = document.createElement("li");
+  ol.appendChild(li);
+  li.innerHTML = elem;
+});
+
+var addRandom = function(){
+  var randoArray = ["Apu", "Moe", "Barney", "Otto", "Nelson"];
+  var x = Math.floor(Math.random()*randoArray.length);
+  //var button = document.querySelector("#button");
+  var li = document.createElement("li");
+  ol.appendChild(li);
+  li.innerHTML = randoArray[x];
+}
+button.addEventListener("click", addRandom);
+
+
+// randoArray.forEach(function(elem){
+//   var li = document.createElement("li");
+//   ol.appendChild(li);
+//   li.innerHTML = elem;
+// });
+//
+// var addFunc = function(){
+//   var text1 = document.querySelector("#textbox1");
+//   var val1 = text1.value;
+//   var text3.value = parseInt(val1) + parseInt(val2);
+// }
+// addFunc();
+// button.addEventListener("click", addFunc);
+
+
+// var body = document.querySelector("body");
+// var ol = document.createElement("ol");
+// body.appendChild(ol);
+// var li1 = document.createElement("li");
+// ol.appendChild(li1);
+// var li2 = document.createElement("li");
+// ol.appendChild(li2);
+// for (var i = 0, i < simpsonsArray.length; i++){
+//   li1.push(simpsonsArray[0]);
+//   li2.push(simpsonsArray[1]);
+// }
+//
+
+</script>
+</html>

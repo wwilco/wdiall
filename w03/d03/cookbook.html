@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+  <script>
+  var body = document.querySelector("body"); //grab body(parent element)
+  var h1 = document.createElement("h1");
+  body.appendChild(h1);
+  h1.innerText = "Lasagna!";
+  var ul = document.createElement("ul");
+  body.appendChild(ul);
+  var li1 = document.createElement("li");
+  ul.appendChild(li1);
+  li1.innerText = "Pasta";
+  var li2 = document.createElement("li");
+  ul.appendChild(li2);
+  li2.innerText = "Sauce";
+
+  var p1 = document.createElement("p");
+  body.appendChild(p1);
+  p1.innerHTML = "Ingredients needed";
+  body.insertBefore(p1, ul);
+
+  var lix = document.createElement("li");
+  lix.innerText = "Lasagna Noodles"
+  ul.removeChild(li1)
+  ul.insertBefore(lix, li2);
+
+  </script>
+</html>
