@@ -1,0 +1,35 @@
+body {
+  background-image: url("http://upload.wikimedia.org/wikipedia/commons/c/c1/George-peabody-library.jpg");
+  height: 300px;
+}
+header {
+  margin: 20 0 20 110px;
+  font-size: 40px;
+  font-family: arial;
+  text-align: 25%;
+  color: white;
+}
+img {
+  height: 200px;
+  width: 140px;
+}
+
+table {
+  border: 2px solid black;
+  background-color: rgba(255,255,255, 0.9);
+  
+}
+
+th {
+  border: 1px solid black;
+  background-color: rgba(255,255,255, 0.9);
+  font-family: arial;
+}
+
+td {
+  border: 1px solid black;
+  text-align: center;
+  background-color: rgba( 0, 0, 0, 0.2 );
+  font-family: arial;
+  padding: 20px;
+}

@@ -21,7 +21,7 @@ server.on("connection", function(ws){
   ws.on("close",function(){
     var x = clients.indexOf(ws);
     clients.splice(x,1);
-    console.log(clients.name + " clients are  still in the room");
+    console.log(clients.length + " clients are  still in the room");
     clients.forEach(function(client){
       client.send("Oh no someone left!");
     })
