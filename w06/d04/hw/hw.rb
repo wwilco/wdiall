@@ -33,26 +33,113 @@
 # mult_by_3 = numbers.map{|num| num * 3}
 # #mult_by_3 will produce in node [3,6,8,12,15], but .map is not a destructive method
 
-x = true
-arr = []
+# x = true
+# arr = []
+#
+# while x == true
+#   puts "enter numbers, then 'end' to finish"
+#   input = gets.chomp
+#
+#   input != "end"
+#   arr.push(input.to_i)
+#
+#   if input == "end"
+#     x = false
+#     square = arr.map{|num| num ** 2}
+#     square.pop
+#     puts square.join("\n")
+#   end
+# end
 
-while x == true
-  puts "enter numbers, then 'end' to finish"
-  input = gets.chomp
 
-  input != "end"
-  arr.push(input.to_i)
+##EX #4, fizz buzz
 
-  if input == "end"
-    x = false
-    square = arr.map{|num| num ** 2}
-    square.pop
-    print square
-  end
+# 1.upto(15) do |i|
+#   if i % 5 == 0 && i % 3 == 0
+#     i == "FizzBuzz"
+#     if true
+#       x = "FizzBuzz" * i
+#       puts x
+#     end
+#   elsif i % 5 == 0
+#     i == "Buzz"
+#     if true
+#       x = "Buzz" * i
+#       puts x
+#     end
+#   elsif i % 3 == 0
+#     i == "Fizz"
+#     if true
+#       x = "Fizz" * i
+#       puts x
+#     end
+#   else
+#     puts i
+#   end
+# end
+
+# (1..100).each{|i|
+#   x = ''
+#   x += 'Fizz' if i%3==0
+#   x += 'Buzz' if i%5==0
+#   puts(x.empty? ? i : x);
+# }
+
+#EX 4, madlibs
+nounarr = []
+adjarr = []
+verbarr = []
+i = 0
+
+puts "write a list of nouns"
+noun = gets.chomp.split(" ")
+print noun
+
+puts "write a list of verbs"
+verb = gets.chomp.split(" ")
+print verb
+
+puts "write a list of adjectives"
+adj = gets.chomp.split(" ")
+puts adj
+
+if verb == true
+  i += 1
+  verb.select
+  puts verb.select[i]
 end
 
+# nounarr.push(noun)
+# print nounarr
+
+# .partition(" ")
+# "stressed".reverse
+# noun = ["dog", "cat", "bird", "tree"]
+
+puts "Here's the #{noun.select} of a #{adj.sample} #{noun}
+Who was #{verb.select}ing up three very #{adj.sample} #{noun}.
+All of them had #{noun} of #{adj.sample}, like their #{noun},
+The #{adj.sample} one in #{noun}.
+
+Here's the #{noun}, of a #{noun} named #{noun},
+Who was busy with three #{noun} of his own,
+They were four #{noun}, #{verb}ing all together,
+Yet they were all #{adj.sample}.
+
+Till the one day when the #{noun} met this #{noun}
+And they knew it was much more than a #{noun},
+That this #{noun} must somehow #{verb} a #{noun}.
+That's the way we all #{verb} the #{adj.sample} #{noun}."
 
 
+
+# if x % 3 == 0
+#   puts "#{x}fizz"
+# end
+#
+# elsif x % 5 == 0
+#   puts "#{x}fizz"
+# end
 
 # caps = characters.map do |character|
 #   word = character.upcase
