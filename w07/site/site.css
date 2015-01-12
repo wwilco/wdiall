@@ -1,0 +1,166 @@
+h1 {
+  font-size: 30px;
+}
+.header h1 h4 {
+  float: left;
+  margin: 0 auto;
+  padding: 0px;
+}
+.header li {
+  display: inline-block;
+  font-family: verdana;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.header li p {
+  float: right;
+  margin: 0 auto;
+  padding: 0px;
+}
+.footer {
+  background-color: grey;
+}
+.footer li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 auto;
+  padding: 5px;
+}
+.footer ul{
+  text-align: center
+}
+.footer p {
+  text-align: center;
+  font-family: verdana;
+
+}
+.contactbubble {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 30px;
+  overflow: hidden;
+  height: 40px;
+  width: 40px;
+  opacity: .8;
+}
+#contact1 {
+  background-image: url("pics/fb.png");
+  overflow: hidden;
+  background-size: cover;
+}
+#contact2 {
+  background-image: url("pics/instagram.png");
+  overflow: hidden;
+  background-size: cover;
+}
+#contact3 {
+  background-image: url("pics/twitterlogo.png");
+  overflow: hidden;
+  background-size: cover;
+}
+#contact4 {
+  background-image: url("pics/githublogo.png");
+  overflow: hidden;
+  background-size: cover;
+}
+#contact5 {
+  background-image: url("pics/LinkedInlogo.png");
+  overflow: hidden;
+  background-size: cover;
+}
+#contact6 {
+  background-image: url("pics/Googleplus.png");
+  overflow: hidden;
+  background-size: cover;
+}
+.contactbubble:hover {
+  opacity: 0.99;
+  /*-o-transition:color .2s ease-out, background 1s ease-in;
+  -ms-transition:color .2s ease-out, background 1s ease-in;
+  -moz-transition:color .2s ease-out, background 1s ease-in;
+  -webkit-transition:color .2s ease-out, background 1s ease-in;*/
+}
+.contactbubble:focus {
+  outline:0;
+}
+.contactbubble:focus {
+  outline:0;
+}
+.contactbubble:active {
+  opacity: 0.9;
+}
+
+
+#bubble1 {
+  background-image: url("pics/calc7.png");
+  overflow: hidden;
+  border-radius: 140px;
+  height: 140px;
+  width: 140px;
+  opacity: .8;
+}
+#bubble2 {
+  background-image: url("http://www.swedenhockeyacademy.se/resources/22302.png");
+  background-repeat: no-repeat;
+  float: left;
+  width: 20%;
+  height: 50%;
+  padding: .5;
+}
+#bubble3 {
+  background-image: url("pics/books.png");
+  overflow: hidden;
+  background-size: cover;
+  float: left;
+  width: 20%;
+  height: 50%;
+  padding: .5;
+}
+#bubble4 {
+  background-image: url("pics/cloud4.png");
+  overflow: hidden;
+  background-size: cover;
+  float: left;
+  width: 20%;
+  height: 50%;
+  padding: .5;
+  border: 5px;
+}
+.projects ul {
+  display: inline;
+  border-radius: 200px;
+  height: 200px;
+  width: 200px;
+  float: left;
+  overflow: hidden;
+}
+.projects img{
+  max-width: 100%;
+  max-height: 100%;
+}
+.workbubble {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 50px;
+  overflow: scroll;
+  display: inline-block;
+  margin: ;
+  /*margin: 100px 20px auto;
+  height: 220px;
+  width: 100px;*/
+  /*border: black thin solid;*/
+  /*width: 20%;
+  height: 50%;*/
+}
+.workbubble:hover {
+  opacity: 0.9;
+  /*-o-transition:color .2s ease-out, background 1s ease-in;
+  -ms-transition:color .2s ease-out, background 1s ease-in;
+  -moz-transition:color .2s ease-out, background 1s ease-in;
+  -webkit-transition:color .2s ease-out, background 1s ease-in;*/
+}
+.workbubble:focus {
+  outline:0;
+}
+.workbubble:active {
+  opacity: 0.7;
+}
