@@ -1,0 +1,82 @@
+<html>
+<head>
+</head>
+<body>
+  
+  <img>
+  <input id="movie" type="text" name="some_name" placeholder="type a movie">
+  <input id="button" type="submit">
+
+  <script>
+
+
+  var button = document.getElementById("button");
+
+  button.addEventListener("click", function() {
+    var text = document.getElementById("movie");
+    var movie_name = text.value;
+    var url_safe = encodeURI(movie_name);
+
+    var url = "http://omdbapi.com/?t=" + url_safe;
+
+    var xhr = new XMLHttpRequest(); //making an object from a constructor
+
+    xhr.open("GET", url); //when I tell you to go get it, this is where I want you to go
+
+    xhr.addEventListener('load' , function(e) { //onreadystatechange is an event listener
+      var d = xhr.responseText //comes in in JSON so you will have to parse it
+      var parsed = JSON.parse(d);
+
+      // var h1 = document.querySelector("h1");
+      // h1.innerText = parsed.Title;
+      //
+      // var h2 = document.querySelector("h2");
+      // h2.innerText = "Directed by " + parsed.Director;
+
+      var poster = document.querySelector("img");
+      poster.setAttribute("src", parsed.Poster)
+    })
+
+    xhr.send();
+
+  });
+  //JQuery
+  /* $.ajax({
+  url: 'http://api.randomuser.me/',
+  dataType: 'json',
+  success: function(data){
+  console.log(data);
+}
+}); */
+
+</script>
+</body>
+</html>
+
+
+<!-- <html>
+  <body>
+    <img>
+    <p></p>
+    <script>
+    var url = "http://omdbapi.com/?t=Top%20Gun";
+    var xhr = new XMLHttpRequest(); //make constructor, get an object.
+    xhr.open("GET", url); //once you get it, go to the url.
+    xhr.onreadystatechange = function() { //.onreadystatechange is an eventListener
+      var d = xhr.responseText; //make it equal to a var so you can JSON it
+      var parsed = JSON.parse(d);
+      // console.log(parsed);
+
+      var p = document.querySelector("p");
+      p.innerText = parsed.Title;
+
+      var img = document.querySelector("img");
+      img.innerHTML =
+
+    })
+    xhr.send();
+
+
+    </script>
+  </body>
+</html> -->

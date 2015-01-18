@@ -1,0 +1,13 @@
+<html>
+
+  <body>
+      <% if (array.length > 0) { %>
+        <ul>
+      <% array.forEach(function(person) { %>
+        <li>My name is <%=person.first%> <%=person.last%>. You can reach me at <%=person.email%></li>
+      <% }) %>
+    </ul>
+  <% } %>
+  </body>
+
+</html>

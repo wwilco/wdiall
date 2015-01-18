@@ -1,0 +1,32 @@
+<html>
+<head>
+</head>
+<body>
+  <input type="text" name="some_name" placeholder="type a movie">
+  <button name="button"></button>  <img>
+  <script>
+
+  var text = document.querySelector("input");
+  var button = document.querySelector("button");
+
+  var url = "http://omdbapi.com/?t="
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", url);
+
+  button.addEventListener("click", function {
+    xhr.onreadystatechange = function() {
+      var d = xhr.responseText
+      var parsed = JSON.parse(d);
+
+      var poster = document.querySelector("img");
+      poster.setAttribute("src", parsed.Poster);
+      body.appendChild("poster");
+    }
+
+    xhr.send();
+  });
+
+
+</script>
+</body>
+</html>

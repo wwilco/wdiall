@@ -1,0 +1,34 @@
+<html>
+<head>
+</head>
+<body>
+
+
+  <script>
+
+    var url = "http://api.randomuser.me/";
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.open("GET", url);
+
+    xhr.addEventListener('load' , function() {
+      var d = xhr.responseText
+      var parsed = JSON.parse(d);
+      // console.log(parsed.results[0].user);
+      console.log(parsed.results[0].user.location.street);
+
+
+      // var h1 = document.querySelector("h1");
+      // h1.innerText = parsed.Title;
+      //
+      // var h2 = document.querySelector("h2");
+      // h2.innerText = "Directed by " + parsed.Director;
+
+    })
+
+    xhr.send();
+
+</script>
+</body>
+</html>
