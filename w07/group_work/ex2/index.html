@@ -1,0 +1,64 @@
+<html>
+<head>
+  <script src= "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src = "jquery.onepage-scroll.js"></script>
+  <link href = "onepage-scroll.css" rel = "stylesheet" type = "text/css">
+</head>
+<body>
+  <div class = "wrapper">
+    <div class = "main">
+      <section class = "section1">
+        <img id= "movie"/>
+      </section>
+      <section class = "section2">
+        <h1>But his daughter, named Nan,</h1>
+        <h1>Ran away with a man,</h1>
+      </section>
+      <section class = "section3">
+        <h1>And as for the bucket . . . Nantucket.</h1>
+        <h2>-- Princeton Tiger</h2>
+      </section>
+      <script>
+      $(".main").onepage_scroll({
+        sectionContainer: "section",
+        easing: "ease",
+        animationTime: 1000,
+        pagination: true,
+        updateURL: false,
+        beforeMove: function(index) {},
+        afterMove: function(index) {},
+        loop: true,
+        keyboard: true,
+        responsiveFallback: false,
+        direction: "horizontal"
+      });
+      </script>
+    </div>
+  </div>
+  <script>
+    var movies = ["Jaws", "Manhattan", "Crash", "Goodfellas", "Amadeus"];
+    var text = document.getElementById("movie");
+    var movie_name = text.value;
+    var url_safe = encodeURI(movie_name);
+
+    var url = "http://omdbapi.com/?t=" + url_safe;
+
+    var xhr = new XMLHttpRequest(); //making an object from a constructor
+
+    xhr.open("GET", url);
+
+    xhr.addEventListener('load' , function(e) {
+      var d = xhr.responseText
+      var parsed = JSON.parse(d);
+
+      var poster = document.querySelector("img");
+      poster.setAttribute("src", parsed.Poster)
+    })
+
+    xhr.send();
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+<head>
+</head>
+
+<body>
+  <ul id="theList">
+  </ul>
+  <!-- // <script src="javascript.js" type="text/javascript"></script> -->
+  <script>
+  var comedies = ["Step Brothers", "The Other Guys", "Zoolander", "Megamind", "Semi-pro", "Blades of Glory"];
+  var list = document.getElementById("theList");
+  var eachItem = function(section){
+    for(var i=0; i < section.length; i++){
+
+      var image = document.createElement("img");
+      var li = document.createElement("li");
+      var div = document.createElement("div");
+      //console.log(i+" li created");
+
+      list.appendChild(li);
+      li.appendChild(image);
+      li.appendChild(div);
+
+      var input = section[i];
+      var url_safe = encodeURI(input);
+      var url = "http://omdbapi.com/?t=" + url_safe;
+      //console.log(url);
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", url);
+      xhr.addEventListener('load', function(e){
+        // var image = document.createElement("img");
+        // var li = document.createElement("li");
+        // var div = document.createElement("div");
+        // list.appendChild(li);
+        // li.appendChild(image);
+        // li.appendChild(div);
+        var d = xhr.responseText;
+        //console.log("stringified");
+        var parsed = JSON.parse(d);
+        //console.log(parsed);
+        //console.log(parsed);
+        image.src = parsed.Poster;
+        //console.log("image source added");
+        div.innerHTML = parsed.Title;
+      })
+      xhr.send();
+    }
+    //console.log(list);
+    //xhr.send();
+  }
+
+  eachItem(comedies);
+  </script>
+</body>
+
+
+</html>

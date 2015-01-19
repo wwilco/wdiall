@@ -1,0 +1,32 @@
+<html>
+
+  <body>
+
+
+<script>
+var comedies = ["Step Brothers", "The Other Guys", "Zoolander", "Megamind", "Semi-pro", "Blades of Glory"];
+var body = document.querySelector("body");
+
+comedies.forEach(function(elem){
+  var ul = document.createElement("ul");
+  body.appendChild(ul);
+  var url_safe = encodeURI(elem);
+  var url = "http://omdbapi.com/?t=" + url_safe;
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", url);
+  xhr.addEventListener('load', function(e){
+
+    var d = xhr.responseText
+    var parsed = JSON.parse(d);
+
+    var poster = document.createElement("img");
+    poster.setAttribute("src", parsed.Poster);
+    body.appendChild("poster");
+
+  })
+  xhr.send();
+});
+</script>
+</body>
+</html>
