@@ -6,7 +6,7 @@ get ("/city") do
   location = request.params["city"]
   location = location.gsub(" ", "+")
 
-  gooresponse = HTTParty.get("https://maps.googleapis.com/maps/api/geocode/json?addess=#{location}&key=AIzaSyDBurh2lDleJzdr7Z2YxK_YQqXF3pnWgbM")
+  gooresponse = HTTParty.get("https://maps.googleapis.com/maps/api/geocode/json?addess=#{location}&key=")
   lat = gooresponse["response"][0]["geometry"]["location"]["lat"]
   long = gooresponse["response"][0]["geometry"]["location"]["lng"]
 
