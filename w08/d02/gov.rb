@@ -11,7 +11,7 @@ end
 # get '/search' do
 #   binding.pry
 #   name = request.params[senator]
-#   url = "http://congress.api.sunlightfoundation.com/legislators?last_name=#{name}&apikey=cb06095fe43d4178a6b65b93a8c0aa29"
+#   url = "http://congress.api.sunlightfoundation.com/legislators?last_name=#{name}&apikey="
 #   response = HTTParty.get(url)
 #   finder = response["results"][0]["twitter_id"]
 #
