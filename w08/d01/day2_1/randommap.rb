@@ -15,7 +15,7 @@ city2 = finder_json[:city]
 xxx = city2.gsub(" ", "+")
 puts finder_json
 
-goomap = "https://maps.googleapis.com/maps/api/geocode/json?address=#{xxx}&key=AIzaSyDBurh2lDleJzdr7Z2YxK_YQqXF3pnWgbM"
+goomap = "https://maps.googleapis.com/maps/api/geocode/json?address=#{xxx}&key="
 response2 = HTTParty.get(goomap)
 finder2 = response2["results"][0]["geometry"]["location"]
 finder2_json = {
